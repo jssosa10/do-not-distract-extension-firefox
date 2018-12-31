@@ -1,0 +1,24 @@
+{
+  "description": "Add a HTML page to cover distracting websites.",
+  "manifest_version": 2,
+  "name": "do-not-distract",
+  "version": "0.1",
+  "homepage_url": "https://github.com/jssosa10/do-not-distract-extension-firefox.git",
+  "icons": {
+    "48": "icons/no-distract-on-48.png"
+  },
+  "browser_action": {
+    "default_icon": "icons/no-distract-off-48.png",
+    "default_title": "No distract"
+  },
+  "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["update.js"]
+        }
+    ],
+    "background" : {
+        "scripts" : ["background.js"]
+    }   
+
+}
